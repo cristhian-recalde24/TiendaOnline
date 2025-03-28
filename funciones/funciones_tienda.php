@@ -66,6 +66,7 @@ function detalles_producto_seleccionado($con, $idProd)
  */
 function validando_carrito()
 {
+    //revisamos si existe una sesion 
     if (isset($_SESSION['tokenStoragel']) == "") {
         return '
             <div class="row align-items-center">
