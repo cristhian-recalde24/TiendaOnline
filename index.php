@@ -45,14 +45,18 @@
 				</div>
 			</div>
 			<?php
+			//getProductData($con): Llama una función en funciones_tienda.php 
+			// que obtiene los productos desde la base de datos.
 			$resultadoProductos = getProductData($con);
 			?>
 
 			<div class="row align-items-center">
 				<?php
+				//recorre los prodcutos obtenidos de la base de datos mysqli_fetch_array
 				while ($dataProduct = mysqli_fetch_array($resultadoProductos)) { ?>
 					<div class="col-6 col-md-3 mt-5 text-center Products">
 						<div class="card" style="max-height: 400px !important; min-height: 400px !important;">
+							
 							<div>
 								<img class="card-img-top" src="<?php echo $dataProduct["foto1"]; ?>" alt="<?php echo $dataProduct['nameProd']; ?>" style="max-width: 200px;">
 							</div>
@@ -61,6 +65,7 @@
 								<h5 class="card-title card_title"><?php echo $dataProduct['nameProd']; ?></h5>
 								<?php
 								$isEven = $dataProduct["prodId"] % 2 == 0;
+								//aqui generamos estrellas de calificacion 
 
 								for ($i = 1; $i <= 5; $i++) {
 									echo '<span><i class="bi bi-star-fill" style="padding: 0px 2px; color:' . ($isEven ? '#ffb90c' : ($i <= 3 ? '#ffb90c' : '')) . ';"></i></span>';
@@ -74,7 +79,7 @@
 
 							
 							<a href="detallesArticulo.php?idProd=<?php echo $dataProduct["prodId"]; ?>" class="red_button btn_puntos" title="Ver <?php echo $dataProduct['nameProd']; ?>">
-								Ver Evento
+								Ver juego 
 								<i class="bi bi-arrow-right-circle"></i>
 							</a>
 						</div>
