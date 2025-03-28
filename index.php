@@ -32,7 +32,7 @@
 			<div class="row align-items-center">
 				<div class="col-lg-12 text-center">
 					<div class="section_title">
-						<img class="img-fluid" src="assets/images/Online.gif" width="800" height="400" alt="casa-cultura">
+						<img class="img-fluid" src="assets/images/Online.gif" width="800" height="400" alt="Tienda Online">
 					</div>
 				</div>
 			</div>
